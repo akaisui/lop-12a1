@@ -1,28 +1,191 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" type="image/png" href="./img/CILKGax.png" />
-        <!-- 1. Tiêu đề của file index -->
-        <title>12A1❤</title>
-        <link rel="stylesheet" href="./css/style.css" />
-    </head>
-    <body class="page__main">
-        <div class="buttons">
-            <!-- Chữ ở menu bạn có thể sửa lại theo ý của bạn -->
-            <a href="index.html" class="btn btn-bir">12A1🤍</a>
-            <a href="timeline.html" class="btn btn-timeline">Dòng thời gian</a>
-            <a href="gallery.html" class="btn btn-gallery">Ảnh kĩ niệm</a>
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#100b15">
+    <meta name="description" content="Một miền ký ức dành cho tập thể 12A1 — nơi thanh xuân vẫn luôn ở lại.">
+    <link rel="icon" type="image/png" href="./img/CILKGax.png">
+    <link rel="preload" as="image" href="./img/nền.jpg">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>12A1 — Chúng ta của năm ấy</title>
+</head>
+<body class="page page-home" data-page="home">
+    <canvas class="ambient-canvas" id="ambientCanvas" aria-hidden="true"></canvas>
+
+    <div class="intro-screen" id="introScreen" role="dialog" aria-label="Bắt đầu hành trình ký ức">
+        <div class="intro-screen__glow" aria-hidden="true"></div>
+        <div class="intro-screen__content">
+            <span class="intro-screen__eyebrow">Một miền ký ức mang tên</span>
+            <strong class="intro-screen__logo">12A1</strong>
+            <p>Có những ngày đã đi qua, nhưng chỉ cần một giai điệu vang lên, tất cả lại trở về.</p>
+            <button class="enter-button magnetic" id="enterExperience" type="button">
+                <span class="enter-button__icon" aria-hidden="true">♥</span>
+                <span>Chạm để trở về năm ấy</span>
+            </button>
+            <small>Âm nhạc sẽ hay hơn khi bạn bật tiếng</small>
         </div>
+    </div>
 
-        <!-- 2. Phần ảnh của người bạn mún chúc -->
-        <img src="./img/ảnh đại diện.jpg" alt="" class="cover" />
+    <header class="site-header" id="siteHeader">
+        <nav class="nav-shell" aria-label="Điều hướng chính">
+            <a class="brand page-link" href="index.html" aria-label="12A1 - Trang chủ">
+                <span class="brand__mark">12</span>
+                <span class="brand__text">A1<small>forever young</small></span>
+            </a>
 
-        <!-- 3. Phần nhạc -->
-        <audio id="player" autoplay loop>
-            <source src="./music/Nụ Cười 18 20 - Doãn Hiếu.mp3" type="audio/mp3" />
+            <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Mở menu">
+                <span></span><span></span>
+            </button>
+
+            <div class="nav-links" id="navLinks">
+                <a class="is-active page-link" href="index.html">Trang chủ</a>
+                <a class="page-link" href="timeline.html">Dòng thời gian</a>
+                <a class="page-link" href="gallery.html">Miền ký ức</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="home-hero" id="top">
+            <div class="home-hero__photo" aria-hidden="true"></div>
+            <div class="home-hero__veil" aria-hidden="true"></div>
+            <div class="home-hero__content content-shell">
+                <div class="hero-copy" data-reveal>
+                    <p class="eyebrow"><span></span> Niên khóa của chúng ta</p>
+                    <h1>Chúng ta đã từng là<br><em>cả một thanh xuân.</em></h1>
+                    <p class="hero-copy__lead">Không cần quay ngược thời gian. Ở đây, tiếng cười, những lần giận dỗi và cả những ước mơ ngày ấy vẫn còn nguyên vẹn.</p>
+                    <div class="hero-actions">
+                        <a class="button button--primary magnetic page-link" href="timeline.html">
+                            <span>Đi qua năm tháng</span><i aria-hidden="true">↗</i>
+                        </a>
+                        <a class="button button--ghost magnetic page-link" href="gallery.html">
+                            <span>Xem những khoảnh khắc</span><i aria-hidden="true">→</i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-signature" data-reveal data-delay="2">
+                    <span class="hero-signature__line"></span>
+                    <p>Chúng ta của năm đó<br><strong>tuyệt vời nhất.</strong></p>
+                </div>
+            </div>
+
+            <div class="hero-metrics content-shell" data-reveal data-delay="3">
+                <div><strong>03</strong><span>năm bên nhau</span></div>
+                <div><strong>199</strong><span>mảnh ký ức</span></div>
+                <div><strong>∞</strong><span>nỗi nhớ</span></div>
+            </div>
+
+            <a class="scroll-hint" href="#our-story" aria-label="Cuộn xuống">
+                <span>Cuộn để nhớ</span><i aria-hidden="true"></i>
+            </a>
+        </section>
+
+        <section class="story-section section" id="our-story">
+            <div class="content-shell story-grid">
+                <div class="story-copy" data-reveal>
+                    <p class="eyebrow"><span></span> Gửi những người bạn năm ấy</p>
+                    <h2>Rồi mai này mỗi người một nơi...</h2>
+                    <blockquote>
+                        “Điều đẹp nhất của tuổi trẻ không phải là ta đã từng rực rỡ thế nào, mà là trong những năm tháng ấy — chúng ta đã có nhau.”
+                    </blockquote>
+                    <p>Ba năm cấp ba gói trong tiếng trống trường, những buổi học vội, một góc bảng đầy chữ và vô vàn câu chuyện chẳng bao giờ kể hết. Chúng ta đã lớn lên cùng nhau theo cách dịu dàng nhất.</p>
+                    <a class="text-link page-link" href="timeline.html">Đọc câu chuyện của 12A1 <span>→</span></a>
+                </div>
+
+                <div class="memory-stack" data-reveal data-delay="2" data-parallax>
+                    <figure class="memory-photo memory-photo--back">
+                        <img src="./img/p21.jpg" alt="Một khoảnh khắc của tập thể 12A1" loading="lazy">
+                    </figure>
+                    <figure class="memory-photo memory-photo--front">
+                        <img src="./img/ảnh đại diện.jpg" alt="Tập thể lớp 12A1" loading="lazy">
+                        <figcaption>Ngày ấy, chúng ta có nhau.</figcaption>
+                    </figure>
+                    <span class="memory-stack__year">20<br>21</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="chapter-section section">
+            <div class="content-shell">
+                <div class="section-heading" data-reveal>
+                    <div>
+                        <p class="eyebrow"><span></span> Những chương còn mãi</p>
+                        <h2>Mỗi bức ảnh là một<br><em>cánh cửa thời gian.</em></h2>
+                    </div>
+                    <p>Chạm vào một chương để trở lại nơi câu chuyện từng bắt đầu.</p>
+                </div>
+
+                <div class="chapter-grid">
+                    <a class="chapter-card chapter-card--timeline page-link" href="timeline.html" data-reveal>
+                        <div class="chapter-card__image" aria-hidden="true"></div>
+                        <div class="chapter-card__shade"></div>
+                        <div class="chapter-card__index">01</div>
+                        <div class="chapter-card__content">
+                            <span>Câu chuyện của chúng ta</span>
+                            <h3>Dòng thời gian</h3>
+                            <p>Từ ngày đầu xa lạ đến buổi học cuối cùng.</p>
+                            <i aria-hidden="true">↗</i>
+                        </div>
+                    </a>
+
+                    <a class="chapter-card chapter-card--gallery page-link" href="gallery.html" data-reveal data-delay="2">
+                        <div class="chapter-card__image" aria-hidden="true"></div>
+                        <div class="chapter-card__shade"></div>
+                        <div class="chapter-card__index">02</div>
+                        <div class="chapter-card__content">
+                            <span>199 mảnh ghép thanh xuân</span>
+                            <h3>Miền ký ức</h3>
+                            <p>Những nụ cười chưa từng phai màu theo năm tháng.</p>
+                            <i aria-hidden="true">↗</i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="days-section section">
+            <div class="days-section__glow" aria-hidden="true"></div>
+            <div class="content-shell days-inner">
+                <p class="eyebrow" data-reveal><span></span> Kể từ ngày 30.06.2021</p>
+                <h2 data-reveal>Thời gian đi qua,<br><em>tình bạn vẫn ở lại.</em></h2>
+                <div class="live-counter" data-since="2021-06-30T00:00:00" data-reveal data-delay="2" aria-label="Thời gian kể từ ngày 30 tháng 6 năm 2021">
+                    <div><strong data-unit="days">0000</strong><span>ngày</span></div>
+                    <div><strong data-unit="hours">00</strong><span>giờ</span></div>
+                    <div><strong data-unit="minutes">00</strong><span>phút</span></div>
+                    <div><strong data-unit="seconds">00</strong><span>giây</span></div>
+                </div>
+                <p class="days-section__note" data-reveal>Cho đến một ngày gặp lại, mong chúng ta vẫn nhận ra nhau bằng nụ cười của tuổi mười tám.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="content-shell footer-inner">
+            <div><strong>12A1</strong><span>— một thời để nhớ, một đời để thương.</span></div>
+            <p>Made with <span aria-label="tình yêu">♥</span> for our youth · <b data-current-year></b></p>
+        </div>
+    </footer>
+
+    <div class="music-player" id="musicPlayer" data-title="Nụ Cười 18 20" data-artist="Doãn Hiếu">
+        <button class="music-player__toggle" type="button" aria-label="Phát nhạc">
+            <span class="music-player__disc" aria-hidden="true"><i>♪</i></span>
+            <span class="music-player__state">
+                <span class="equalizer"><i></i><i></i><i></i></span>
+            </span>
+        </button>
+        <div class="music-player__meta">
+            <small>Đang phát</small>
+            <strong>Nụ Cười 18 20</strong>
+            <span>Doãn Hiếu</span>
+        </div>
+        <button class="music-player__mute" type="button" aria-label="Tắt âm thanh"><span aria-hidden="true">♫</span></button>
+        <audio id="player" loop preload="metadata">
+            <source src="./music/Nụ Cười 18 20 - Doãn Hiếu.mp3" type="audio/mpeg">
         </audio>
-    </body>
+    </div>
+
+    <script src="./js/functions.js"></script>
+</body>
 </html>

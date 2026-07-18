@@ -1,630 +1,139 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <link rel="icon" type="image/png" href="./img/CILKGax.png" />
-        <!-- Tiêu đề của trang ảnh kĩ niệm -->
-        <title>Ảnh kĩ niệm</title>
-        <link rel="stylesheet" href="./css/gallery.css" />
-        <link rel="stylesheet" href="./css/style.css" />
-    </head>
-    <body>
-        <div class="buttons">
-            <a href="index.html" class="btn btn-bir">12A1🤍</a>
-            <a href="timeline.html" class="btn btn-timeline">Dòng thời gian</a>
-            <a href="gallery.html" class="btn btn-gallery">Ảnh kĩ niệm</a>
-        </div>
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#100b15">
+    <meta name="description" content="199 mảnh ký ức thanh xuân của tập thể 12A1.">
+    <link rel="icon" type="image/png" href="./img/CILKGax.png">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/gallery.css">
+    <title>Miền ký ức — 12A1</title>
+</head>
+<body class="page page-gallery" data-page="gallery">
+    <canvas class="ambient-canvas" id="ambientCanvas" aria-hidden="true"></canvas>
 
-        <!-- 6. Thay tất cả bằng hình ảnh của bạn -->
-        <div class="gallery" id="gallery">
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p1.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p2.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p3.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p4.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p5.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p6.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p7.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p8.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p9.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p10.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p11.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p12.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p13.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p14.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p15.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p16.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p17.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p18.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p19.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p20.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p21.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p22.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p23.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p24.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p25.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p26.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p27.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p28.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p29.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p30.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p31.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p32.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p33.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p34.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p35.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p36.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p37.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p38.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p39.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p40.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p41.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p42.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p43.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p44.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p45.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p46.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p47.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p48.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p49.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p50.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p51.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p52.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p53.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p54.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p55.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p56.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p57.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p58.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p59.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p60.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p61.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p62.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p63.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p64.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p65.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p66.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p67.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p68.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p69.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p70.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p71.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p72.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p73.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p74.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p75.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p76.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p77.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p78.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p79.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p80.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p81.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p82.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p83.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p84.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p85.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p86.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p87.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p88.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p89.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p90.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p91.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p92.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p93.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p94.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p95.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p96.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p97.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p98.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p99.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p100.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p101.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p102.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p103.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p104.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p104.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p105.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p106.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p107.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p108.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p109.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p110.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p111.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p112.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p113.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p114.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p115.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p116.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p117.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p118.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p119.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p120.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p121.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p122.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p123.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p124.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p125.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p126.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p127.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p128.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p129.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p130.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p131.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p132.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p133.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p134.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p135.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p136.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p137.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p138.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p139.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p140.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p141.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p142.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p143.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p144.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p145.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p146.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p147.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p148.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p149.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p150.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p151.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p152.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p153.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p154.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p155.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p156.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p157.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p158.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p159.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p160.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p161.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p162.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p163.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p164.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p165.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p166.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p167.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p168.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p169.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p170.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p171.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p172.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p173.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p174.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p175.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p176.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p177.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p178.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p179.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p180.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p181.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p182.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p183.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p184.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p185.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p186.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p187.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p188.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p189.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p190.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p191.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p192.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p193.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p194.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p195.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p196.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p197.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p198.jpg" alt="" /></div>
-            </div>
-            <div class="gallery-item">
-                <div class="content"><img src="./img/p199.jpg" alt="" /></div>
-            </div>
+    <header class="site-header" id="siteHeader">
+        <nav class="nav-shell" aria-label="Điều hướng chính">
+            <a class="brand page-link" href="index.html" aria-label="12A1 - Trang chủ">
+                <span class="brand__mark">12</span>
+                <span class="brand__text">A1<small>forever young</small></span>
+            </a>
+            <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Mở menu">
+                <span></span><span></span>
+            </button>
+            <div class="nav-links" id="navLinks">
+                <a class="page-link" href="index.html">Trang chủ</a>
+                <a class="page-link" href="timeline.html">Dòng thời gian</a>
+                <a class="is-active page-link" href="gallery.html">Miền ký ức</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="gallery-hero page-hero">
+            <div class="gallery-hero__collage" aria-hidden="true">
+                <span style="background-image: url('./img/p4.jpg'); --x: 4%; --y: 9%; --r: -8deg;"></span>
+                <span style="background-image: url('./img/p21.jpg'); --x: 72%; --y: 4%; --r: 7deg;"></span>
+                <span style="background-image: url('./img/p90.jpg'); --x: 82%; --y: 53%; --r: -5deg;"></span>
+                <span style="background-image: url('./img/p132.jpg'); --x: 10%; --y: 58%; --r: 5deg;"></span>
+            </div>
+            <div class="page-hero__veil"></div>
+            <div class="content-shell page-hero__content page-hero__content--center">
+                <p class="eyebrow" data-reveal><span></span> Chương 02 · 199 mảnh ký ức</p>
+                <h1 data-reveal>Một miền thương nhớ<br><em>chưa từng phai màu.</em></h1>
+                <p data-reveal data-delay="2">Ảnh có thể cũ đi, nhưng khoảnh khắc bên trong thì vẫn mãi là hôm qua.</p>
+                <a class="scroll-hint scroll-hint--inline" href="#gallery-memories" data-reveal data-delay="3">
+                    <span>Mở album</span><i aria-hidden="true"></i>
+                </a>
+            </div>
+        </section>
+
+        <section class="gallery-section section" id="gallery-memories">
+            <div class="content-shell content-shell--wide">
+                <div class="gallery-toolbar" data-reveal>
+                    <div>
+                        <p class="eyebrow"><span></span> Album của 12A1</p>
+                        <h2>Những ngày chúng ta<br><em>còn ở cạnh nhau.</em></h2>
+                    </div>
+                    <div class="gallery-toolbar__actions">
+                        <p id="galleryCount"><strong>0</strong> / 199 khoảnh khắc</p>
+                        <button class="shuffle-button magnetic" id="shuffleGallery" type="button">
+                            <span aria-hidden="true">✦</span> Gặp một ký ức bất ngờ
+                        </button>
+                    </div>
+                </div>
+
+                <div class="gallery-grid" id="gallery" aria-live="polite"></div>
+
+                <div class="gallery-more" id="galleryMore">
+                    <p>Vẫn còn rất nhiều câu chuyện đang chờ...</p>
+                    <button class="button button--primary magnetic" id="loadMore" type="button">
+                        <span>Xem thêm kỷ niệm</span><i aria-hidden="true">↓</i>
+                    </button>
+                </div>
+
+                <noscript>
+                    <p class="noscript-note">Vui lòng bật JavaScript để xem trọn vẹn album ký ức.</p>
+                </noscript>
+            </div>
+        </section>
+
+        <section class="gallery-quote section">
+            <div class="content-shell" data-reveal>
+                <span class="gallery-quote__mark" aria-hidden="true">“</span>
+                <blockquote>Chúng ta chụp ảnh để hiểu rằng,<br>ngay cả khi thời gian trôi đi,<br><em>khoảnh khắc ấy vẫn còn ở lại.</em></blockquote>
+                <p>— Gửi tuổi mười tám của 12A1 —</p>
+            </div>
+        </section>
+
+        <section class="next-chapter next-chapter--home section">
+            <div class="content-shell next-chapter__inner" data-reveal>
+                <span>Khép lại album</span>
+                <h2>Nhưng câu chuyện của chúng ta<br><em>thì chưa bao giờ kết thúc.</em></h2>
+                <a class="button button--ghost magnetic page-link" href="index.html"><span>Trở về trang đầu</span><i>→</i></a>
+            </div>
+        </section>
+    </main>
+
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Xem ảnh kỷ niệm" aria-hidden="true">
+        <div class="lightbox__backdrop" data-lightbox-close></div>
+        <div class="lightbox__topbar">
+            <div class="lightbox__brand"><strong>12A1</strong><span id="lightboxCounter">01 / 199</span></div>
+            <button class="lightbox__close" type="button" data-lightbox-close aria-label="Đóng ảnh"><span></span><span></span></button>
         </div>
-        <!-- Phần nhạc -->
-        <audio id="player" autoplay loop>
-            <source src="./music/Love Scenario - iKON.mp3" type="audio/mp3" />
+        <button class="lightbox__nav lightbox__nav--prev" id="lightboxPrev" type="button" aria-label="Ảnh trước">←</button>
+        <figure class="lightbox__figure">
+            <div class="lightbox__loader" aria-hidden="true"></div>
+            <img id="lightboxImage" src="" alt="">
+            <figcaption id="lightboxCaption">Ký ức số 01</figcaption>
+        </figure>
+        <button class="lightbox__nav lightbox__nav--next" id="lightboxNext" type="button" aria-label="Ảnh tiếp theo">→</button>
+        <p class="lightbox__hint">Dùng phím ← → để chuyển ảnh · ESC để đóng</p>
+    </div>
+
+    <footer class="site-footer">
+        <div class="content-shell footer-inner">
+            <div><strong>12A1</strong><span>— một thời để nhớ, một đời để thương.</span></div>
+            <p>Made with <span aria-label="tình yêu">♥</span> for our youth · <b data-current-year></b></p>
+        </div>
+    </footer>
+
+    <div class="music-player" id="musicPlayer" data-title="Love Scenario" data-artist="iKON">
+        <button class="music-player__toggle" type="button" aria-label="Phát nhạc">
+            <span class="music-player__disc" aria-hidden="true"><i>♪</i></span>
+            <span class="music-player__state"><span class="equalizer"><i></i><i></i><i></i></span></span>
+        </button>
+        <div class="music-player__meta">
+            <small>Đang phát</small><strong>Love Scenario</strong><span>iKON</span>
+        </div>
+        <button class="music-player__mute" type="button" aria-label="Tắt âm thanh"><span aria-hidden="true">♫</span></button>
+        <audio id="player" loop preload="metadata">
+            <source src="./music/Love Scenario - iKON.mp3" type="audio/mpeg">
         </audio>
-    </body>
+    </div>
 
+    <script src="./js/functions.js"></script>
     <script src="./js/gallery.js"></script>
+</body>
 </html>
