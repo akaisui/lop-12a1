@@ -236,7 +236,7 @@
             updateState();
 
             try {
-                if (sessionStorage.getItem("12a1-intro-seen") === "true" && body.getAttribute("data-page") !== "home") {
+                if (sessionStorage.getItem("12a1-intro-seen") === "true") {
                     window.setTimeout(startAudio, 180);
                 }
             } catch (error) { /* no-op */ }
